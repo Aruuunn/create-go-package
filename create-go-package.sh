@@ -36,6 +36,10 @@ fi
 git clone git@github.com:ArunMurugan78/simple_package_seed.git $PKG_NAME
 
 cd $PKG_NAME
+
+sed -i "s/pkg/$PKG_NAME/" pkg.go
+sed -i "s/pkg/$PKG_NAME/" pkg_test.go
+
 mv pkg.go $PKG_NAME.go
 mv pkg_test.go ${PKG_NAME}_test.go
 
